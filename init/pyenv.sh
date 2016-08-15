@@ -16,7 +16,11 @@ sudo apt install make \
                  xz-utils \
                  -y
 
-curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+# URL shortended by http://git.io
+# Original URL:
+# https://raw.githubusercontent.com/yyuu/pyenv-installer/master/
+# bin/pyenv-installer
+curl -L https://git.io/v62nr | bash
 
 git clone https://github.com/yyuu/pyenv-virtualenvwrapper.git \
           ~/.pyenv/plugins/pyenv-virtualenvwrapper
