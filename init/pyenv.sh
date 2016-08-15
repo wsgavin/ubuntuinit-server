@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update
+sudo -k apt update
 sudo apt install make \
                  build-essential \
                  libssl-dev \
@@ -63,6 +63,9 @@ pip install -U pip setuptools
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper
+
+# For sanity sake...
+sudo -k
 
 # References
 #
