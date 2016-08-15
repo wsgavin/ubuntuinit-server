@@ -1,6 +1,8 @@
 #!/bin/bash
 
-sudo -k apt update
+# Force sudo to prompt for password.
+sudo -k
+sudo apt update
 sudo apt install make \
                  build-essential \
                  libssl-dev \
@@ -25,11 +27,8 @@ sudo apt install make \
 # Running pyenv-installer
 curl -L https://git.io/v62nr | bash
 
-# Original URL:
-# https://github.com/yyuu/pyenv-virtualenvwrapper.git
-#
-# Cloning pyenv-virtualwrapper plugin.
-git clone https://git.io/v62co ~/.pyenv/plugins/pyenv-virtualenvwrapper
+git clone https://github.com/yyuu/pyenv-virtualenvwrapper.git \
+          ~/.pyenv/plugins/pyenv-virtualenvwrapper
 
 if ! grep -q "# pyenv" "$HOME/.bashrc"; then
 

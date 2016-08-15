@@ -2,6 +2,8 @@
 
 #set -e
 
+sudo -k
+
 # Just because, clearing some variables that are shared between other scripts.
 unset account_password
 unset git_fullname
@@ -13,25 +15,26 @@ unset git_email
 . init/repos.sh
 
 # Initializing apt-get
-sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y
+sudo apt update
+sudo apt upgrade -y
 
 # Installing various applications...
-sudo apt-get install git -y
-sudo apt-get install vim -y
-sudo apt-get install nmap -y
-sudo apt-get install moreutils -y
-sudo apt-get install curl -y
-sudo apt-get install ctags -y
+sudo apt install git -y
+sudo apt install vim -y
+sudo apt install nmap -y
+sudo apt install moreutils -y
+sudo apt install curl -y
+sudo apt install ctags -y
 
-sudo apt-get clean
-sudo apt-get autoclean
+sudo apt clean
+sudo apt autoclean
 
 # Initializing scripts...
 . init/git.sh
 . init/vim.sh
 . init/bash.sh
-#. init/nodejs.sh
+
+# For sanity sake
+sudo -k
 
 exit 0
