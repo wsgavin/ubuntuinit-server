@@ -12,7 +12,6 @@ unset git_email
 . init/banner.sh
 . init/check.sh
 . init/input.sh
-. init/repos.sh
 
 # Initializing apt-get
 sudo apt update

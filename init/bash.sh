@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo
 printf "Initializing home directory with dotfiles..."

@@ -2,7 +2,7 @@
 
 # Assumes python & virtualenvrwapper installed.
 
-if [ $# -ne 1 ]; then
+if [ $# -ne 2 ]; then
   echo "$0 <project name>"
   exit 1
 fi
@@ -19,7 +19,9 @@ pip install --upgrade pip setuptools
 pip install django
 django-admin.py startproject "$1" "$1"
 
-pip freeze > "$1/requirements.txt"
+if [ "$2" ]; then
+  pip install -r "$2"
+fi
 
 cat <<EOF
 

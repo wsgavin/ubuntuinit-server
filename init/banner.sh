@@ -22,4 +22,9 @@ This has been tested on Ubuntu Linux 16.04
 
 Many thanks to https://mths.be/dotfiles
 
+Optional Scripts
+
+There are scripts in the optional directory for further installs: e.g. python,
+node, etc.
+
 EOF

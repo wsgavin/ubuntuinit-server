@@ -63,6 +63,8 @@ pip install -U pip setuptools
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper
 
+pyenv rehash
+
 # For sanity sake...
 sudo -k
 
